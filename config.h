@@ -6,16 +6,23 @@ static int centered = 1;                    /* -c option; centers dmenu on scree
 static int min_width = 500;                    /* minimum width when centered */
 /* -fn option overrides fonts[0]; default X11 font or font set */
 static const char *fonts[]          = {
-	"Cascadia Code PL:style=Regular:size=11:antialias=true:autohint=true",
+	/* "Cascadia Code:style=regular:size=10:antialias=true:autohint=true", */
+	"Terminus:style=Bold:size=12:antialias=true:autohint=true",
+	/* "Cascadia Code PL:style=Regular:size=11:antialias=true:autohint=true", */
+	/* "Misc Tamsyn:style=Regular:pixelsize=15", */
 	"Noto Emoji:size=11",
 	"monospace:size=8"
 };
 static const char *prompt      = NULL;      /* -p  option; prompt to the left of input field */
+
+static const char col_black[]       = "#000000";
+static const char col_white[]       = "#d7d7d7";
+
 static const char *colors[SchemeLast][2] = {
 	/*     fg         bg       */
-	[SchemeNorm] = { "#ebdbb2", "#282828" },
-	[SchemeSel] = { "#ebdbb2", "#458588" },
-	[SchemeOut] = { "#ebdbb2", "#458588" },
+	[SchemeNorm] = { col_white, col_black },
+	[SchemeSel] = { col_black, col_white },
+	[SchemeOut] = { col_white, col_black },
 };
 /* -l option; if nonzero, dmenu uses vertical list with given number of lines */
 static unsigned int lines      = 15;
