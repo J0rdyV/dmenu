@@ -6,8 +6,8 @@ static int centered = 1;                    /* -c option; centers dmenu on scree
 static int min_width = 500;                    /* minimum width when centered */
 /* -fn option overrides fonts[0]; default X11 font or font set */
 static const char *fonts[]          = {
-	/* "Cascadia Code:style=regular:size=10:antialias=true:autohint=true", */
-	"Terminus:style=Bold:size=12:antialias=true:autohint=true",
+	"Cascadia Code:style=regular:pixelsize=18:antialias=true:autohint=true",
+	/* "Terminus:size=14:antialias=true:autohint=true", */
 	/* "Cascadia Code PL:style=Regular:size=11:antialias=true:autohint=true", */
 	/* "Misc Tamsyn:style=Regular:pixelsize=15", */
 	"Noto Emoji:size=11",
@@ -15,8 +15,15 @@ static const char *fonts[]          = {
 };
 static const char *prompt      = NULL;      /* -p  option; prompt to the left of input field */
 
-static const char col_black[]       = "#000000";
-static const char col_white[]       = "#d7d7d7";
+static const char col_black[]       = "#32302f";
+/* static const char col_white[]       = "#d7d7d7"; */
+
+/* static const char col_black[]       = "#32302f"; */
+/* static const char col_white[]       = "#d7d7d7"; */
+/* static const char col_white[]       = "#f1f1f1"; */
+static const char col_white[]       = "#ebdbb2";
+/* static const char col_orange[]      = "#fabd2f"; */
+
 
 static const char *colors[SchemeLast][2] = {
 	/*     fg         bg       */
